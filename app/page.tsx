@@ -14,9 +14,43 @@ function SectionDivider() {
   )
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ulrich Ziemes",
+  honorificSuffix: "VR LL.M.",
+  url: "https://ulrichziemes.de",
+  image: "https://ulrichziemes.de/images/ulrich-ziemes.jpg",
+  jobTitle: "Geschäftsführer & Investor",
+  description:
+    "Erfahrener Geschäftsführer und Investor. Experte für Family Office, Kapitalanlagen und Immobilien.",
+  knowsAbout: [
+    "Family Office",
+    "Kapitalanlagen",
+    "Immobilien",
+    "Vermögensverwaltung",
+    "Private Equity",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Family Office",
+  },
+  nationality: {
+    "@type": "Country",
+    name: "Germany",
+  },
+  sameAs: [
+    "https://www.xing.com/profile/Ulrich_Ziemes",
+  ],
+}
+
 export default function HomePage() {
   return (
     <main className="relative min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       <HeroSection />
       <SectionDivider />
