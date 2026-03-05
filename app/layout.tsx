@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       'Erfahrener Geschäftsführer und Investor. Spezialist für Family Office, Kapitalanlagen und Immobilien.',
     images: [
       {
-        url: '/images/ulrich.jpeg', // ideally 1200×630px
+        url: '/images/ulrich.jpg', // ideally 1200×630px
         width: 1200,
         height: 630,
         alt: 'Ulrich Ziemes – Geschäftsführer und Investor',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: 'Ulrich Ziemes VR LL.M. | Geschäftsführer & Investor',
     description:
       'Experte für Family Office, Kapitalanlagen und Immobilien. Strategische Vermögensverwaltung.',
-    images: ['/images/ulrich.jpeg'],
+    images: ['/images/ulrich.jpg'],
     creator: '@ulrichziemes', // update if you have a handle
   },
 
@@ -96,11 +96,11 @@ export const metadata: Metadata = {
   // Favicons
   icons: {
     icon: [
-      { url: '/images/ulrich.jpeg', media: '(prefers-color-scheme: light)' },
-      { url: '/images/ulrich.jpeg', media: '(prefers-color-scheme: dark)' },
+      { url: '/images/ulrich.jpg', media: '(prefers-color-scheme: light)' },
+      { url: '/images/ulrich.jpg', media: '(prefers-color-scheme: dark)' },
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
-    apple: '/images/ulrich.jpeg',
+    apple: '/images/ulrich.jpg',
   },
 
   // Verification tags — add once you verify in Google / Bing Search Console

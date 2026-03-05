@@ -133,7 +133,7 @@ export function HeroSection() {
             {/* Image */}
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="/images/ulrich.jpeg"
+                src="/images/ulrich.jpg"
                 alt="Ulrich Ziemes"
                 width={480}
                 height={580}

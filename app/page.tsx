@@ -20,7 +20,7 @@ const jsonLd = {
   name: "Ulrich Ziemes",
   honorificSuffix: "VR LL.M.",
   url: "https://ulrichziemes.de",
-  image: "https://ulrichziemes.de/images/ulrich.jpeg",
+  image: "https://ulrichziemes.de/images/ulrich.jpg",
   jobTitle: "Geschäftsführer & Investor",
   description:
     "Erfahrener Geschäftsführer und Investor. Experte für Family Office, Kapitalanlagen und Immobilien.",
