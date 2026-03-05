@@ -12,28 +12,28 @@ const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playf
 export const metadata: Metadata = {
   // Core identity — name + title for direct name searches
   title: {
-    default: 'Ulrich Ziemes | Geschäftsführer, Investor & Family Office Experte',
+    default: 'Ulrich Ziemes | Managing Director, Investor & Family Office Expert',
     template: '%s | Ulrich Ziemes VR LL.M.',
   },
   description:
-    'Ulrich Ziemes VR LL.M. – erfahrener Geschäftsführer, Investor und Experte für Family Office, Kapitalanlagen und Immobilien. Strategische Vermögensverwaltung und unternehmerische Führung auf höchstem Niveau.',
+    'Ulrich Ziemes VR LL.M. – experienced Managing Director, investor and expert in family office, capital investments and real estate. Strategic wealth management and entrepreneurial leadership at the highest level.',
 
   keywords: [
     'Ulrich Ziemes',
     'Ulrich Jakob Ziemes',
     'Ulrich Ziemes VR LL.M.',
-    'Geschäftsführer',
+    'Managing Director',
     'Investor',
     'Family Office',
-    'Kapitalanlagen',
-    'Immobilien',
-    'Vermögensverwaltung',
+    'Capital Investments',
+    'Real Estate',
+    'Wealth Management',
     'Private Equity',
-    'Unternehmensführung',
+    'Corporate Leadership',
     'Ulrich Ziemes Investor',
-    'Ulrich Ziemes Geschäftsführer',
-    'Family Office Deutschland',
-    'Immobilieninvestor Deutschland',
+    'Ulrich Ziemes Managing Director',
+    'Family Office Germany',
+    'Real Estate Investor Germany',
   ],
 
   metadataBase: new URL('https://ulrichziemes.de'),
@@ -51,18 +51,18 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: 'profile',
-    locale: 'de_DE',
+    locale: 'en_US',
     url: 'https://ulrichziemes.de',
     siteName: 'Ulrich Ziemes',
-    title: 'Ulrich Ziemes VR LL.M. | Geschäftsführer, Investor & Family Office',
+    title: 'Ulrich Ziemes VR LL.M. | Managing Director, Investor & Family Office',
     description:
-      'Erfahrener Geschäftsführer und Investor. Spezialist für Family Office, Kapitalanlagen und Immobilien.',
+      'Experienced Managing Director and investor. Specialist in family office, capital investments and real estate.',
     images: [
       {
         url: '/images/ulrich.jpg', // ideally 1200×630px
         width: 1200,
         height: 630,
-        alt: 'Ulrich Ziemes – Geschäftsführer und Investor',
+        alt: 'Ulrich Ziemes – Managing Director and Investor',
       },
     ],
     // OG profile fields boost name-search relevance
@@ -73,9 +73,9 @@ export const metadata: Metadata = {
   // Twitter / X card
   twitter: {
     card: 'summary_large_image',
-    title: 'Ulrich Ziemes VR LL.M. | Geschäftsführer & Investor',
+    title: 'Ulrich Ziemes VR LL.M. | Managing Director & Investor',
     description:
-      'Experte für Family Office, Kapitalanlagen und Immobilien. Strategische Vermögensverwaltung.',
+      'Expert in family office, capital investments and real estate. Strategic wealth management.',
     images: ['/images/ulrich.jpg'],
     creator: '@ulrichziemes', // update if you have a handle
   },
@@ -126,7 +126,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="de">
+    <html lang="en">
       <body className={`${_inter.variable} ${_playfair.variable} font-sans antialiased`}>
         <PageLoader/>
         <LocaleProvider defaultLocale="en">
