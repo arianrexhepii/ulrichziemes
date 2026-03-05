@@ -51,7 +51,7 @@ export async function POST(req: Request) {
             <div class="container">
               <div class="header">
                 <h1>New Message</h1>
-                <p>via ziemes.com contact form</p>
+                <p>via ulrichziemes.de contact form</p>
               </div>
               <div class="body">
                 <div class="field">

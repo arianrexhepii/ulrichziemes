@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { LocaleProvider } from '@/lib/locale-context'
 import './globals.css'
 import { PageLoader } from '@/components/pageLoader'
+import { Toaster } from '@/components/ui/toaster'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -48,6 +49,7 @@ export default function RootLayout({
         <PageLoader/>
         <LocaleProvider defaultLocale="de">
           {children}
+          <Toaster/>
         </LocaleProvider>
         <Analytics />
       </body>

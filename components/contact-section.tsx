@@ -3,11 +3,13 @@
 import { useState, type FormEvent } from "react"
 import { useLocale } from "@/lib/locale-context"
 import { useInView } from "@/hooks/use-in-view"
+import { useToast } from "@/hooks/use-toast"
 import { Send, CheckCircle, Mail, MapPin, ArrowUpRight } from "lucide-react"
 
 export function ContactSection() {
   const { t } = useLocale()
   const { ref, isInView } = useInView()
+  const { toast } = useToast()
   const [isSending, setIsSending] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [focusedField, setFocusedField] = useState<string | null>(null)
@@ -36,8 +38,18 @@ export function ContactSection() {
       setIsSent(true)
       form.reset()
       setTimeout(() => setIsSent(false), 4000)
+
+      toast({
+        className: "border-green-500 border text-green-900",
+        title: t.contact.toastSuccessTitle,
+        description: t.contact.toastSuccessDescription,
+      })
     } catch {
-      alert("Something went wrong. Please try again.")
+      toast({
+        className: "border-red-500 border text-red-900",
+        title: t.contact.toastErrorTitle,
+        description: t.contact.toastErrorDescription,
+      })
     } finally {
       setIsSending(false)
     }
@@ -76,7 +88,7 @@ export function ContactSection() {
             {/* Contact cards */}
             <div className="mt-10 flex flex-col gap-4">
               <a
-                href="mailto:info@ziemes.com"
+                href="mailto:info@ulrichziemes.de"
                 className="glass noise group relative overflow-hidden rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
               >
                 <div className="relative flex items-center gap-4">
@@ -89,7 +101,7 @@ export function ContactSection() {
                         Email
                       </p>
                       <p className="mt-0.5 text-sm font-semibold text-foreground">
-                        info@ziemes.com
+                        info@ulrichziemes.de
                       </p>
                     </div>
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground/40 transition-all duration-300 group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
