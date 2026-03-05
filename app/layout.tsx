@@ -129,7 +129,7 @@ export default function RootLayout({
     <html lang="de">
       <body className={`${_inter.variable} ${_playfair.variable} font-sans antialiased`}>
         <PageLoader/>
-        <LocaleProvider defaultLocale="de">
+        <LocaleProvider defaultLocale="en">
           {children}
           <Toaster/>
         </LocaleProvider>

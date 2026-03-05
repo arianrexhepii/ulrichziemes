@@ -11,7 +11,7 @@ interface LocaleContextType {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
-export function LocaleProvider({ children, defaultLocale = "de" }: { children: ReactNode; defaultLocale?: Locale }) {
+export function LocaleProvider({ children, defaultLocale = "en" }: { children: ReactNode; defaultLocale?: Locale }) {
   const [locale, setLocaleState] = useState<Locale>(defaultLocale)
   const t = getTranslations(locale)
 
