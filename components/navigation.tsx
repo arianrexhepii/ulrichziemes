@@ -48,6 +48,7 @@ export function Navigation() {
     { href: "#about", label: t.nav.about, id: "about" },
     { href: "#experience", label: t.nav.experience, id: "experience" },
     { href: "#companies", label: t.nav.companies, id: "companies" },
+     { href: "/my-story", label: t.nav.myStory, id: "my-story" },
     { href: "#contact", label: t.nav.contact, id: "contact" },
   ]
 

@@ -15,19 +15,20 @@ export function PageLoader() {
   }, [])
 
   useEffect(() => {
-    if (typeof window === "undefined") return
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual"
-    }
-    window.history.replaceState(null, "", "/")
+  if (typeof window === "undefined") return
+
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual"
+  }
+
+  window.scrollTo({ top: 0, behavior: "instant" })
+
+  const raf = requestAnimationFrame(() => {
     window.scrollTo({ top: 0, behavior: "instant" })
-    const raf = requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, behavior: "instant" })
-    })
+  })
 
-    return () => cancelAnimationFrame(raf)
-  }, [])
-
+  return () => cancelAnimationFrame(raf)
+}, [])
   if (phase === "gone") return null
 
   return (

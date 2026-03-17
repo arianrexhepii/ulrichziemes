@@ -2,9 +2,11 @@
 
 import { useLocale } from "@/lib/locale-context"
 import { ArrowUp } from "lucide-react"
+import { useRouter } from "next/navigation";
 
 export function Footer() {
   const { t } = useLocale()
+  const navigation = useRouter();
 
   return (
     <footer className="relative py-8 sm:py-12" style={{ borderTop: "1px solid hsl(38, 65%, 55%, 0.1)" }}>
@@ -14,6 +16,7 @@ export function Footer() {
             <div
               className="flex h-9 w-9 items-center justify-center rounded-lg font-serif text-xs font-bold sm:h-10 sm:w-10 sm:text-sm"
               style={{ background: "hsl(38, 65%, 55%, 0.12)", color: "hsl(38, 65%, 55%)" }}
+              onClick={()=>navigation.push("/")}
             >
               UZ
             </div>

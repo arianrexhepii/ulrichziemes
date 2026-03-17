@@ -130,6 +130,7 @@ export const translations = {
   en: {
     nav: {
       about: "About",
+      myStory: "My Story",
       experience: "Experience",
       companies: "Companies",
       contact: "Contact",
